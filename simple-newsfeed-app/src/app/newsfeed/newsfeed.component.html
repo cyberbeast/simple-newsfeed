@@ -10,13 +10,18 @@
 <!-- <pre>
   {{newsfeed$ | async | json}}
 </pre> -->
-<div fxLayout="row" fxFlexFill>
-  <div fxFlex fxFlexOrder="2" fxFlex.xs="55" fxFlexAlign="center">
-    <button mat-raised-button (click)="onCreate(text.value)">Create</button>
+<div fxLayout="column" fxFlexFill>
+  <div fxFlexOrder="2" fxFlexAlign="center">
+    <button mat-raised-button (click)="onCreate(text.value, publicationDate.value)">Add</button>
   </div>
-  <div fxFlex style="margin:2%">
+  <div style="margin:2%" fxFlexAlign="center">
     <mat-form-field style="width: 100%;">
       <textarea matInput #text placeholder="Text"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput #publicationDate [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </div>
 

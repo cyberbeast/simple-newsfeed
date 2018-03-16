@@ -17,11 +17,11 @@ export class NewsfeedComponent implements OnInit {
     this.newsfeed$ = store.select(fromStore.getCurrentNewsfeed);
   }
 
-  onCreate(text: string) {
+  onCreate(text: string, publicationDate: string) {
     this.store.dispatch(
       new fromStore.CreateNewsItem({
         text: text,
-        publicationDate: new Date().toISOString()
+        publicationDate: new Date(publicationDate).toISOString()
       })
     );
   }

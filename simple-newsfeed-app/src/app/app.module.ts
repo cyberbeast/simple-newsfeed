@@ -12,6 +12,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -45,11 +47,13 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
     MatInputModule,
+    MatNativeDateModule,
     MatButtonModule,
     MatToolbarModule,
     MatDividerModule,
     MatListModule,
     MatIconModule,
+    MatDatepickerModule,
     StoreModule.forRoot({}),
     StoreModule.forFeature('app', reducers),
     EffectsModule.forRoot([]),
