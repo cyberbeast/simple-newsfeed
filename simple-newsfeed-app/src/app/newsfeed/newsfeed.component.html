@@ -1,0 +1,23 @@
+<mat-list>
+  <div *ngFor="let item of (newsfeed$ | async)">
+    <mat-list-item>
+      <p mat-line>{{item.text}}</p>
+      <p mat-line style="font-size:x-small; color:rgba(0, 0, 0, 0.54)"> {{item.publicationDate}} </p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </div>
+</mat-list>
+<!-- <pre>
+  {{newsfeed$ | async | json}}
+</pre> -->
+<div fxLayout="row" fxFlexFill>
+  <div fxFlex fxFlexOrder="2" fxFlex.xs="55" fxFlexAlign="center">
+    <button mat-raised-button (click)="onCreate(text.value)">Create</button>
+  </div>
+  <div fxFlex style="margin:2%">
+    <mat-form-field style="width: 100%;">
+      <textarea matInput #text placeholder="Text"></textarea>
+    </mat-form-field>
+  </div>
+
+</div>
