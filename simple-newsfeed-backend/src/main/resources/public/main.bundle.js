@@ -90,14 +90,16 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_material_divider__ = __webpack_require__("../../../material/esm5/divider.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_material_list__ = __webpack_require__("../../../material/esm5/list.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_material_icon__ = __webpack_require__("../../../material/esm5/icon.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_flex_layout__ = __webpack_require__("../../../flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ngrx_store_devtools__ = __webpack_require__("../../../../@ngrx/store-devtools/@ngrx/store-devtools.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/@ngrx/store.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ngrx_effects__ = __webpack_require__("../../../../@ngrx/effects/@ngrx/effects.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__store__ = __webpack_require__("../../../../../src/app/store/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services__ = __webpack_require__("../../../../../src/app/services/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__newsfeed_newsfeed_component__ = __webpack_require__("../../../../../src/app/newsfeed/newsfeed.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_material_datepicker__ = __webpack_require__("../../../material/esm5/datepicker.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_flex_layout__ = __webpack_require__("../../../flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ngrx_store_devtools__ = __webpack_require__("../../../../@ngrx/store-devtools/@ngrx/store-devtools.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ngrx_store__ = __webpack_require__("../../../../@ngrx/store/@ngrx/store.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ngrx_effects__ = __webpack_require__("../../../../@ngrx/effects/@ngrx/effects.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__store__ = __webpack_require__("../../../../../src/app/store/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services__ = __webpack_require__("../../../../../src/app/services/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__newsfeed_newsfeed_component__ = __webpack_require__("../../../../../src/app/newsfeed/newsfeed.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -120,6 +122,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 // ngrx main imports
 
 
@@ -129,40 +133,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var appRoutes = [
     { path: '', redirectTo: '/newsfeed', pathMatch: 'full' },
-    { path: 'newsfeed', component: __WEBPACK_IMPORTED_MODULE_19__newsfeed_newsfeed_component__["a" /* NewsfeedComponent */] },
+    { path: 'newsfeed', component: __WEBPACK_IMPORTED_MODULE_21__newsfeed_newsfeed_component__["a" /* NewsfeedComponent */] },
     { path: '**', redirectTo: '/newsfeed' }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["J" /* NgModule */])({
-            declarations: [__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_19__newsfeed_newsfeed_component__["a" /* NewsfeedComponent */]],
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["K" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_21__newsfeed_newsfeed_component__["a" /* NewsfeedComponent */]],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
                 ),
-                __WEBPACK_IMPORTED_MODULE_6__angular_material_input__["a" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_6__angular_material_input__["b" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_13__angular_material__["a" /* MatNativeDateModule */],
                 __WEBPACK_IMPORTED_MODULE_7__angular_material_button__["a" /* MatButtonModule */],
                 __WEBPACK_IMPORTED_MODULE_8__angular_material_toolbar__["a" /* MatToolbarModule */],
                 __WEBPACK_IMPORTED_MODULE_9__angular_material_divider__["a" /* MatDividerModule */],
                 __WEBPACK_IMPORTED_MODULE_10__angular_material_list__["a" /* MatListModule */],
                 __WEBPACK_IMPORTED_MODULE_11__angular_material_icon__["a" /* MatIconModule */],
-                __WEBPACK_IMPORTED_MODULE_15__ngrx_store__["j" /* StoreModule */].forRoot({}),
-                __WEBPACK_IMPORTED_MODULE_15__ngrx_store__["j" /* StoreModule */].forFeature('app', __WEBPACK_IMPORTED_MODULE_17__store__["e" /* reducers */]),
-                __WEBPACK_IMPORTED_MODULE_16__ngrx_effects__["c" /* EffectsModule */].forRoot([]),
-                __WEBPACK_IMPORTED_MODULE_16__ngrx_effects__["c" /* EffectsModule */].forFeature(__WEBPACK_IMPORTED_MODULE_17__store__["c" /* effects */]),
+                __WEBPACK_IMPORTED_MODULE_12__angular_material_datepicker__["a" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_17__ngrx_store__["j" /* StoreModule */].forRoot({}),
+                __WEBPACK_IMPORTED_MODULE_17__ngrx_store__["j" /* StoreModule */].forFeature('app', __WEBPACK_IMPORTED_MODULE_19__store__["e" /* reducers */]),
+                __WEBPACK_IMPORTED_MODULE_18__ngrx_effects__["c" /* EffectsModule */].forRoot([]),
+                __WEBPACK_IMPORTED_MODULE_18__ngrx_effects__["c" /* EffectsModule */].forFeature(__WEBPACK_IMPORTED_MODULE_19__store__["c" /* effects */]),
                 // Instrumentation must be imported after importing StoreModule (config is optional)
-                __WEBPACK_IMPORTED_MODULE_13__ngrx_store_devtools__["a" /* StoreDevtoolsModule */].instrument({
+                __WEBPACK_IMPORTED_MODULE_15__ngrx_store_devtools__["a" /* StoreDevtoolsModule */].instrument({
                     maxAge: 25,
                     logOnly: __WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].production // Restrict extension to log-only mode
                 }),
-                __WEBPACK_IMPORTED_MODULE_12__angular_flex_layout__["a" /* FlexLayoutModule */]
+                __WEBPACK_IMPORTED_MODULE_14__angular_flex_layout__["a" /* FlexLayoutModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_18__services__["b" /* services */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_20__services__["b" /* services */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -193,7 +199,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/newsfeed/newsfeed.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-list>\n  <div *ngFor=\"let item of (newsfeed$ | async)\">\n    <mat-list-item>\n      <p mat-line>{{item.text}}</p>\n      <p mat-line style=\"font-size:x-small; color:rgba(0, 0, 0, 0.54)\"> {{item.publicationDate}} </p>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n  </div>\n</mat-list>\n<!-- <pre>\n  {{newsfeed$ | async | json}}\n</pre> -->\n<div fxLayout=\"row\" fxFlexFill>\n  <div fxFlex fxFlexOrder=\"2\" fxFlex.xs=\"55\" fxFlexAlign=\"center\">\n    <button mat-raised-button (click)=\"onCreate(text.value)\">Create</button>\n  </div>\n  <div fxFlex style=\"margin:2%\">\n    <mat-form-field style=\"width: 100%;\">\n      <textarea matInput #text placeholder=\"Text\"></textarea>\n    </mat-form-field>\n  </div>\n\n</div>\n"
+module.exports = "<mat-list>\n  <div *ngFor=\"let item of (newsfeed$ | async)\">\n    <mat-list-item>\n      <p mat-line>{{item.text}}</p>\n      <p mat-line style=\"font-size:x-small; color:rgba(0, 0, 0, 0.54)\"> {{item.publicationDate}} </p>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n  </div>\n</mat-list>\n<!-- <pre>\n  {{newsfeed$ | async | json}}\n</pre> -->\n<div fxLayout=\"column\" fxFlexFill>\n  <div fxFlexOrder=\"2\" fxFlexAlign=\"center\">\n    <button mat-raised-button (click)=\"onCreate(text.value, publicationDate.value)\">Add</button>\n  </div>\n  <div style=\"margin:2%\" fxFlexAlign=\"center\">\n    <mat-form-field style=\"width: 100%;\">\n      <textarea matInput #text placeholder=\"Text\"></textarea>\n    </mat-form-field>\n    <mat-form-field>\n      <input matInput #publicationDate [matDatepicker]=\"picker\" placeholder=\"Choose a date\">\n      <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n      <mat-datepicker #picker></mat-datepicker>\n    </mat-form-field>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -222,10 +228,10 @@ var NewsfeedComponent = /** @class */ (function () {
         this.store = store;
         this.newsfeed$ = store.select(__WEBPACK_IMPORTED_MODULE_2__store__["d" /* getCurrentNewsfeed */]);
     }
-    NewsfeedComponent.prototype.onCreate = function (text) {
+    NewsfeedComponent.prototype.onCreate = function (text, publicationDate) {
         this.store.dispatch(new __WEBPACK_IMPORTED_MODULE_2__store__["a" /* CreateNewsItem */]({
             text: text,
-            publicationDate: new Date().toISOString()
+            publicationDate: new Date(publicationDate).toISOString()
         }));
     };
     NewsfeedComponent.prototype.ngOnInit = function () {
@@ -299,7 +305,7 @@ var NewsfeedService = /** @class */ (function () {
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].throw(error.json()); }));
     };
     NewsfeedService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], NewsfeedService);
     return NewsfeedService;
@@ -469,7 +475,7 @@ var NewsfeedEffects = /** @class */ (function () {
         __metadata("design:type", Object)
     ], NewsfeedEffects.prototype, "createNewsfeedItem$", void 0);
     NewsfeedEffects = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ngrx_effects__["a" /* Actions */], __WEBPACK_IMPORTED_MODULE_5__services__["a" /* NewsfeedService */]])
     ], NewsfeedEffects);
     return NewsfeedEffects;
@@ -620,7 +626,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_18" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])()
     .bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */])
