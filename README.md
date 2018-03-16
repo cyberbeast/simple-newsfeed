@@ -1,7 +1,7 @@
 # simple-newsfeed
 Simple Angular + ngrx + Spark + MongoDB powered newsfeed system
 
-![Architecture Diagram](https://www.lucidchart.com/publicSegments/view/16dfbe7e-f593-471e-afcd-2d4187479522/image.jpeg "Architecture Diagram")
+![Architecture Diagram](https://www.lucidchart.com/publicSegments/view/ad834bd3-32ef-41af-a2cc-2652058334fb/image.jpeg "Architecture Diagram")
 
 ## Run Instructions
 
